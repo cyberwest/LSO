@@ -1,0 +1,337 @@
+/*
+-- map
+*/
+.intro {
+	background: @grey;
+	text-align: center;
+	margin: 0px;
+	display: block;
+	p {
+		margin: 0px;
+		padding: 10px 20px;
+		font-size: 1.2em;
+	}
+	h3 {
+		margin: 0px;
+		padding: 0.5em 0 0 0;
+		font-size: 1.5em;
+	}
+}
+
+#hallfloor, #basementfloor {
+	position: relative;
+}
+
+#basementfloor .map {
+	background: url('@{imgpath}/building.png') no-repeat bottom left;
+	padding-bottom: 190px;
+}
+
+.map {
+	position: relative;
+	z-index: 1;
+
+	.map-inner {
+		width: 80%;
+		max-width: 802px;
+		margin: 0% auto;
+		position: relative;
+	}
+
+	img#hall, img#basement {
+		.loadingimg;
+	}
+
+	h2 {
+		margin: 20px 10%;
+		border: 1px solid #8d8d8d;
+		padding: 0.5em 1em;
+	}
+
+}
+
+area {
+	cursor: pointer;
+}
+
+// label styling
+.label {
+	position: absolute;
+	z-index: 2;
+	cursor: pointer;
+
+	top:0;
+	left:0;
+
+	text-align: center;
+
+	span {
+		display: inline-block;
+
+		color:#fefefe;
+		background: #333;
+		padding: 8px 10px;
+		.rounded(5px);
+
+	}
+
+	i.marker {
+		margin: 10px auto 0 auto;
+		display: block;
+		width: 25px;
+		height: 25px;
+		line-height: 25px;
+
+		.gradient(#F5F5F5, #C7C7C7, #FFFFFF);
+		border: 1px solid #B7B7B7;
+		color: #B7B7B7;
+		font-style: normal;
+		
+		.rounded(100%);
+
+		&:after {
+			font-size: 1.5em;
+			content: '▼';
+			color: #333;
+			margin-top: -44px;
+			display: block;
+		}
+	}
+
+
+	&:hover,
+	&.hover {
+		.transition {
+			transition:margin 0.1s;
+			-webkit-transition:margin 0.1s; /* Safari */
+		}
+		span {
+			margin-top: -10px;
+			margin-bottom: 8px;
+			.transition;
+		}
+		i.marker:after  {
+			margin-top: -48px;
+			.transition;
+		}
+	}
+
+	&.label-topwing, &.label-bottomwing {
+		span {
+			background: lighten(#333, 20%);
+		}
+		
+		i.marker:after  {
+			color: lighten(#333, 20%);
+		}
+	}
+}
+
+/* LABEL POSITIONING */
+
+@hallwidth: 1792; // top map img width
+@hallheight: 1172; // top map img height
+
+#hallfloor {
+	.label-bottomwing {
+		width: 100%*(308/@hallwidth);
+		margin-top: 100%*(540/@hallheight);
+		margin-left: 100%*(33/@hallheight);
+	}
+	.label-topwing {
+		width: 100%*(313/@hallwidth);
+		margin-top: 100%*(80/@hallheight);
+		margin-left: 100%*(29/@hallheight);
+	}
+	.label-hall {
+		width: 100%*(1237/@hallwidth);
+		margin-top: 100%*(310/@hallheight);
+		margin-left: 100%*(329/@hallheight);
+	}
+	.label-entrance {
+		width: 100%*(578/@hallwidth);
+		margin-top: 100%*(310/@hallheight);
+		margin-left: 100%*(100/@hallheight);
+	}
+}
+
+
+@basewidth: 802; // bottom map img width
+@baseheight: 975; // bottom map img height
+
+#basementfloor {
+	.label-gamelan {
+		width: 100%*(230/@basewidth);
+		margin-top: 100%*(70/@baseheight);
+		margin-left: 100%*(410/@baseheight);
+	}
+	.label-clore {
+		display: none;
+	}
+	.label-clore2 {
+		width: 100%*(102/@basewidth);
+		margin-top: 100%*(70/@baseheight);
+		margin-left: 100%*(290/@baseheight);
+	}
+	.label-clore1 {
+		width: 100%*(102/@basewidth);
+		margin-top: 100%*(70/@baseheight);
+		margin-left: 100%*(120/@baseheight);
+	}
+	.label-topwing {
+		width: 100%*(121/@basewidth);
+		margin-top: 100%*(370/@baseheight);
+		margin-left: 100%*(45/@baseheight);
+	}
+	.label-bottomwing {
+		width: 100%*(121/@basewidth);
+		margin-top: 100%*(720/@baseheight);
+		margin-left: 100%*(45/@baseheight);
+	}
+	.label-cafe {
+		width: 100%*(364/@basewidth);
+		margin-top: 100%*(540/@baseheight);
+		margin-left: 100%*(220/@baseheight);
+	}
+	.label-toilets {
+		width: 100%*(100/@basewidth);
+		margin-top: 100%*(930/@baseheight);
+		margin-left: 100%*(375/@baseheight);
+	}
+	.label-plant {
+		width: 100%*(300/@basewidth);
+		margin-top: 100%*(960/@baseheight);
+		margin-left: 100%*(500/@baseheight);
+	}
+	.label-resources {
+		width: 100%*(100/@basewidth);
+		margin-top: 100%*(990/@baseheight);
+		margin-left: 100%*(230/@baseheight);
+	}
+	.label-library {
+		width: 100%*(240/@basewidth);
+		margin-top: 100%*(740/@baseheight);
+		margin-left: 100%*(320/@baseheight);
+	}
+	.label-discovery {
+		width: 100%*(200/@basewidth);
+		margin-top: 100%*(320/@baseheight);
+		margin-left: 100%*(320/@baseheight);
+	}
+	.label-kitchen {
+		width: 100%*(135/@basewidth);
+		margin-top: 100%*(740/@baseheight);
+		margin-left: 100%*(630/@baseheight);
+	}
+	.label-office {
+		width: 100%*(150/@basewidth);
+		margin-top: 100%*(70/@baseheight);
+		margin-left: 100%*(700/@baseheight);
+	}
+}
+
+
+// MOBILE
+@media (max-width: 822px) {
+	#hallfloor, #basementfloor {
+		margin: 20px 0px;
+	}
+	#basementfloor .map {
+		background: none;
+		padding-bottom: 0px;
+	}
+}
+
+@media screen and (max-width: 615px) {
+	.label {
+		&:hover span {
+			margin: 0px;
+		}
+		i.marker {
+			display: none;
+		}
+	}
+}
+@media screen and (max-width: @tablets) {
+	#hallfloor {
+		.label-bottomwing {
+			margin-top: 100%*(480/@hallheight);
+		}
+		.label-topwing {
+			margin-top: 100%*(30/@hallheight);
+		}
+		.label-hall {
+			margin-top: 100%*(270/@hallheight);
+		}
+		.label-entrance {
+			margin-top: 100%*(270/@hallheight);
+		}
+	}
+
+	#basementfloor {
+		.label-gamelan {
+			margin-top: 100%*(60/@baseheight);
+		}
+		.label-clore2 {
+			margin-top: 100%*(40/@baseheight);
+		}
+		.label-clore1 {
+			margin-top: 100%*(40/@baseheight);
+		}
+		.label-topwing {
+			margin-top: 100%*(300/@baseheight);
+		}
+		.label-bottomwing {
+			margin-top: 100%*(670/@baseheight);
+		}
+		.label-cafe {
+			margin-top: 100%*(520/@baseheight);
+		}
+		.label-toilets {
+			margin-top: 100%*(920/@baseheight);
+		}
+	}
+}
+
+// 488 is important in main.js
+@media screen and (max-width: 488px) {
+	.map img#hall, img#basement {
+		background: none;
+	}
+	#hallfloor .label, 
+	#basementfloor .label {
+		margin: 2px 0px;
+		display: block;
+		position: relative;
+		width: 100%;
+		span {
+			width: 100%;
+		}
+	}
+	#hallfloor .label-bottomwing {
+		display: none;
+	}
+
+	#basementfloor {
+		.label-bottomwing,
+		.label-toilets,
+		.label-clore2,
+		.label-clore1,
+		.label-resources,
+		.label-office {
+			display: none;
+		}
+	}
+
+	#hallfloor > .map-info, #basementfloor > .map-info  {
+		display: none;
+		width: 100%;
+		position: relative;
+		top: 0px;
+		bottom: 0px;
+		right: 0px;
+
+		border: none;
+		border-top: 1px solid @grey;
+	}
+}

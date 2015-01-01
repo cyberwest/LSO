@@ -1,0 +1,83 @@
+/*
+-- Instrument info
+*/
+.learn-info  {
+	position: fixed;
+	top: 20px;
+	bottom: 150px;
+	right: 0;
+
+	z-index: 10;
+
+	width: 0;
+	max-width: 500px;
+
+	background: @white;
+	border: 1px solid @grey;
+	border-right: none;
+
+	overflow: auto;
+	
+	// Text content
+	.inner {
+		padding: 20px;
+		text-align: left;
+		h1 {
+			margin: 0.2em 0;
+		}
+
+		p {
+			margin: 0.5em 0;
+		}
+	}
+
+	// Contact link 
+	.bottomlink {
+		padding: 10px 20px;
+		color: @white;
+		font-size: 1.2em;
+		cursor: pointer;
+		background-color: @blue;
+		&:hover {
+			background-color: lighten(@blue, 10%);
+		}
+	}
+
+	// close button
+	.close {
+		position: absolute;
+		top:10px;
+		right: 10px;
+		cursor: pointer;
+
+		width: 25px;
+		height: 25px;
+		line-height: 25px;
+		text-align: center;
+
+		border: 1px solid @blue;
+		color: @blue;
+		font-style: normal;
+		
+		.rounded(100%);
+		&:hover {
+			background: @blue;
+			color: @white;
+		}
+	}
+}
+
+// 488 is important in main.js
+@media screen and (max-width: 488px) {
+	.learn-info {
+		display: none;
+		width: 100%;
+		position: relative;
+		top: 0px;
+		bottom: 0px;
+		right: 0;
+
+		border: none;
+		border-top: 1px solid @grey;
+	}
+}

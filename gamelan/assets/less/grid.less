@@ -1,0 +1,76 @@
+/*
+-- Grid
+-- 12 is the magic number
+*/
+@max: 12;
+
+.cols (@index) when (@index > 0) {
+	(~".col-@{index}") { // .col-#
+		width: percentage(@index / @max);
+	}
+
+	.cols(@index - 1);
+}
+
+.cols (0) {} // end
+.cols (@max); // call
+// end grid
+
+[class*='col-'] {
+	float: left;
+	min-height: 1px;
+	height: 100%;
+	position: relative;
+	.inner {
+		.clearfix;
+		margin: 15px;
+	}
+}
+
+.row {
+	.clearfix;
+	width: 100%;
+	position: relative;
+}
+
+
+@media screen and (max-width: @tablets) {
+	[class*='col-'] {
+		width: 100%;
+		float: left;
+		min-height: 1px;
+		height: 100%;
+		position: relative;
+		.inner {
+			.clearfix;
+			margin: 15px;
+		}
+	}
+}
+
+@media screen and (min-width: @tablets) and (max-width: @desktops) {
+	@max: 6;
+
+	.cols (@index) when (@index > 0) {
+		(~".col-@{index}") { // .col-#
+			width: percentage(@index / @max);
+		}
+
+		// .cols(@index - 1);
+	}
+
+	.cols (0) {} // end
+	.cols (@max); // call
+	// end grid
+
+	[class*='col-'] {
+		float: left;
+		min-height: 1px;
+		height: 100%;
+		position: relative;
+		.inner {
+			.clearfix;
+			margin: 15px;
+		}
+	}
+}

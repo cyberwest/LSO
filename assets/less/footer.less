@@ -1,0 +1,47 @@
+/*
+-- Footer links and footer
+*/
+
+.toplink {
+	background: @purple;
+
+	&:hover {
+		background: @pink;
+	}
+}
+
+footer {
+	clear:both;
+	background: @purple;
+	color: darken(@white, 10%);
+	padding: 1em 20%;
+	.clearfix;
+
+	z-index: 2;
+	position: relative;
+
+	a {
+		color: darken(@white, 10%);
+	}
+
+	.contact {
+		float: left;
+		border-right: 3px solid darken(@white, 10%);
+		padding: 20px 50px 20px 0px;
+		margin-right: 50px;
+		width: 25%;
+		max-width: 250px;
+	}
+
+	p {
+		margin: 1em auto;
+		font-size: 1.2em;
+		// width: 50%;
+	}
+}
+
+@media screen and (max-width: @tablets) {
+	footer .contact {
+		display: none;
+	}
+}

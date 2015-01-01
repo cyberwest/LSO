@@ -1,0 +1,80 @@
+/*
+-- LSO St Lukes stylesheet
+-- @author: Zoe Bryant
+-- The full CSS is written in LESS and can be found in the assets/less folder.
+-- You can find out more about LESS here - http://lesscss.org/
+*/
+
+@import url(mixins.less); // utilities and global styles
+@import url(slider.less); // basic image slide css
+@import url(hero.less); // hero section
+@import url(routemenu.less); // basic route menu
+@import url(map-content.less); // map content specifics
+@import url(map.less); // map section
+@import url(footer.less); // footer
+
+.gamelan-link {
+	background:url('@{imgpath}/sm-gamelan-hero.jpg') no-repeat center center;
+	.clearfix;
+	a {
+		text-decoration: none;
+		height: 100%;
+		display: block;
+		padding: 20px 20%;
+
+		font-size: 1.2em;
+		text-align: center;
+		span {
+			color:#fefefe;
+			background: #333;
+			display: inline-block;
+			padding: 10px;
+			margin: 10px;
+		}
+
+
+		&:hover span {
+			padding: 20px;
+			margin: 0px;
+		}
+
+	}
+}
+.sharethis {
+	text-align: center;
+	padding: 10px 0px;
+}
+
+// General Responsive stylings, see also map.less
+@media screen and (max-width: @tablets) {
+	.type.footer {
+		width: 100%;
+		position: relative;
+		right: 0px;
+		bottom: 0px;
+	}
+	.footer p {
+		width: 100%;
+	}
+
+	// SLIDE BACKGROUNDS name hero-#.jpg
+		//set
+		@slides: 4;
+
+		.slide-bgs (@index) when (@index > 0) {
+
+			(~"li.slide:nth-child(@{index})") {
+				background:url('@{imgpath}/hero/m-front-@{index}.jpg') no-repeat center center;
+			}
+
+			// next iteration
+			.slide-bgs(@index - 1);
+		}
+
+		// end
+		.slide-bgs (0) {}
+		// call
+		.slide-bgs (@slides);
+	// end backgrounds
+
+}

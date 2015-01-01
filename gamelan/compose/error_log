@@ -1,0 +1,2 @@
+[07-Nov-2014 13:45:45] PHP Fatal error:  Cannot redeclare get_tiny_url() (previously declared in /home/lsorave/public_html/gamelan/compose/tinyurl.php:11) in /home/lsorave/public_html/gamelan/compose/tinyurl.php on line 39
+[07-Nov-2014 13:46:26] PHP Fatal error:  Cannot redeclare get_tiny_url() (previously declared in /home/lsorave/public_html/gamelan/compose/tinyurl.php:11) in /home/lsorave/public_html/gamelan/compose/tinyurl.php on line 39

@@ -1,0 +1,46 @@
+/*
+-- Intro
+-- basic page stuff
+*/
+.gamelan_hero {
+	z-index: 2;
+	position: relative;
+	background:url('@{imgpath}/gamelan-hero.jpg') no-repeat center center;
+	background-size: cover;
+	.clearfix;
+	.inner {
+		display: inline-block;
+		float: left;
+		width: 69%;
+		margin: 5%;
+		background: @white;
+		border: 1px solid @grey;
+		
+		h1 {
+			margin: 20px 30px 10px 30px;
+		}
+		p {
+			margin: 10px 30px 20px 30px;
+		}
+
+	}
+	.logo {
+		width: 20%;
+		float: left;
+		padding-bottom: 20px
+	}
+}
+
+.intro {
+	z-index: 2;
+	position: relative;
+	background: @grey;
+	text-align: center;
+	margin: 0px;
+	display: block;
+	p {
+		margin: 0px;
+		padding: 10px 20px;
+		font-size: 1.2em;
+	}
+}

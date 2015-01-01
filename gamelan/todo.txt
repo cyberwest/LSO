@@ -1,0 +1,79 @@
+General
+	xx Get someone who's never been on it before to check it over
+
+http://lso.ravewebmedia.co.uk/
+	## High Priority
+	x Hero loading time - mobile versions!
+	x A link to the gamelan page: both (x) in pop out and (x) on page.
+	x Mobile version - don't show empty rooms.
+	-!! Content. Actual content.
+	x Route name in headers.
+	x Clearly label info as info
+
+	## Mid Priority
+	x Putting credits in the footer/// readme. Rave, me, Martyna (then Charles)
+
+	## Low Priority
+	- Have it on the hero so when you hover over a route it changes the background
+	- Little stairs icons instead of x's
+
+http://lso.ravewebmedia.co.uk/gamelan/
+	## High Priority
+	x Spell check.
+	x Calung and the Reyong - are the wrong way up. It would be great if you could flip these around - the largest keys/pots are always on the left-hand side.
+	x Also, were any pictures taken of the beaters or mallets/ceng ceng cymbals? It might be nice to add these to give a sense of how the instruments are played.
+	x The only thing I noticed was having to scroll back up when I'd had a look at all the instruments
+
+	## Mid Priority
+	- Left/Right instruments. Martyna asked.
+	
+	## Low Priority
+	- Hovering box: annoying.
+
+http://lso.ravewebmedia.co.uk/gamelan/compose/
+	## High Priority
+	x Remove percussion sample for now.
+	x Social media share buttons: explore
+	x As a quick FYI the ‘start / stop’ button doesn’t seem to go back to saying ‘start’ after you’ve used it once – you have to press ‘stop’ again to start it… bit odd.
+
+	## Mid Priority
+	x Tell James it supports mp3 now
+	x Share functionality
+	x Fancy header
+
+	## Low Priority
+	- Save functionality
+	- I would also suggest a little tiny icon of the instrument next to its name in the list, to make the listing more interesting to look at and more visual.
+
+
+
+
+
+
+### ARCHIVE
+http://lso.ravewebmedia.co.uk/gamelan/
+	x Notes are playable (finish putting them in)
+	-- /After/ composition is done, then think about having the left/right instuments.
+	x /After/ Fill in learn buttons (disable for now) (M)
+	x Have a general introduction to the gamelan. (M - Z add space)
+	x Put in pitch ref!! Larger the key = deeper the note
+
+http://lso.ravewebmedia.co.uk/gamelan/compose/
+
+	x Working with just UGAL and kempli (possibly cengceng and gong) notes. Site updated.
+	-- MP3 files, and changing samples as and when needed
+	-- Save / share functionality
+	-/ Sample compositions
+	x Toggle to -close/open
+	x Reduce size  (Martyna)
+	-/ Pairs
+	x The composition site needs a similar LSO header to the Gamelan one, and the same footer. 
+	- I would also suggest a little tiny icon of the instrument next to its name in the list, to make the listing more interesting to look at and more visual.
+	- I think social sharing buttons would be great. People will want to share this because it's great, and we want them to do this too!
+
+http://lso.ravewebmedia.co.uk/
+	- Hero loading time - mobile versions!!!
+	x office / resources no pop out please
+
+Global
+	x One thing I think we should have on the main site (and the Gamelan page) is the facility to click outside the opening tab and have it go away.

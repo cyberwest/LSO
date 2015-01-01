@@ -1,0 +1,103 @@
+/*
+-- Mixins
+-- Branding colours and handy classes
+*/
+
+// COLOURS
+@logo: #d31048;
+@purple: #963594;
+@blue: #52caef;
+@lime: #c5c42a;
+@drkpurple: #351163;
+@pink: #ee4392;
+@grey: #d1d2d4;
+@text: #231f20;
+@white: #fff;
+
+// UTILITIES
+@imgpath: "../img";
+
+.clearfix {
+  zoom: 1;
+  &:before, &:after { content: ""; display: table; }
+  &:after { clear: both; }
+}
+.full {
+  width: 100%;
+  height: 100%;
+}
+.reset {
+  padding: 0px;
+  margin: 0px;
+}
+
+.gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
+  background: @color;
+  background: -webkit-gradient(linear,
+                               left bottom,
+                               left top,
+                               color-stop(0, @start),
+                               color-stop(1, @stop));
+  background: -ms-linear-gradient(bottom,
+                                  @start,
+                                  @stop);
+  background: -moz-linear-gradient(center bottom,
+                                   @start 0%,
+                                   @stop 100%);
+  background: -o-linear-gradient(@stop,
+                                 @start);
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@stop,@start));
+}
+
+.rounded(@radius: 2px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.loadingimg {
+  background: url('@{imgpath}/loading.gif') no-repeat center center; // pretty loading icon
+}
+
+// Responsive standpoints
+@tablets: 768px;
+@desktops: 992px;
+@lgdesktops: 1200px;
+
+
+// GLOBALS
+html, body {
+  font-size: 16px;
+  color: @text;
+  .full;
+  line-height: 1.2;
+  font-family: Helvetica, sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+a {
+  color: lighten(@text, 5%);
+  &:hover {
+    color: @text;
+  }
+}
+
+.browsehappy { // IE upgrade your browser message
+  background: @logo;
+  display: block;
+  font-size: 18px;
+  padding: 20px;
+  margin: 0px;
+}
+
+.loader { // page loader
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url('@{imgpath}/loading.gif') 50% 50% no-repeat rgb(249,249,249);
+}

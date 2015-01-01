@@ -1,0 +1,64 @@
+// instruments
+var instruments = [
+	{
+		"name":"Jegogan",
+		"id":"jegogan",
+		"info":"<p>The largest and lowest-pitched of the metallophones, the <i>jegogan</i>, always played in pairs with padded mallets, reinforce the strongest notes of the <i>pokok</i>, or core melody.</p>",
+	},
+	{
+		"name":"Calung",
+		"id":"calung",
+		"info":"<p>The <i>calung</i>, always played in pairs, are an octave higher than the <i>jegogan</i> and play the <i>pokok</i>, or core melody of a piece.</p>",
+	},
+	{
+		"name":"Gong Wadon (female)",
+		"id":"gong_wadon",
+		"info":"<p>The largest of the two big gongs, with the lowest pitch, the <i>gong wadon</i> (female) marks the end of a musical cycle, in alternation with the <i>gong lanang</i>. The gongs create an intense, deep and resonant sound that sustains for a long time and can travel long distances.</p>",
+	},
+	{
+		"name":"Gong Lanang (male)",
+		"id":"gong_lanang",
+		"info":"<p>The smaller of the two big gongs, but with a faster vibration, the <i>gong lanang</i> (male) marks the end of alternate musical cycles.</p>",
+	},
+	{
+		"name":"Gong Kempur",
+		"id":"gong_kempur",
+		"info":"<p>The medium-sized <i>kempur</i> provides secondary punctuation, often dividing the cycle into half or quarter. All of the hanging gongs are played with padded beaters.</p>",
+	},
+	{
+		"name":"Gangsa Pemade",
+		"id":"gangsa_pemade",
+		"info":"<p>Medium-sized <i>gangsa</i>, an octave higher than the <i>ugal</i> and played with a lighter wooden beater. The <i>gangsa</i> play in tuned pairs and expand and elaborate the core melody using a technique called <i>kotekan</i>, where two interlocking parts - <i>polos</i> (plain) and <i>sangsih</i> (differing) - unite to create a continuous current of figuration.</p>",
+	},
+	{
+		"name":"Ugal",
+		"id":"ugal",
+		"info":"<p>The <i>ugal</i> is the largest of the <i>gangsa</i> (2-octave metallophones) and acts as the melodic leader of the ensemble, fleshing out the core melody at the same speed as the <i>kempli</i>. The <i>ugal</i> has 12 keys and is played with a large wooden mallet, giving it a distinctive sound that cuts through the other instruments.</p>",
+	},
+	{
+		"name":"Kempli",
+		"id":"kempli",
+		"info":"<p>The <i>kempli</i>, a single horizontally-mounted gong-chime, acts as the heartbeat of the ensemble, steadily keeping the tempo set by the two <i>kendang</i> (drums).</p>",
+	},
+	{
+		"name":"Ceng-ceng",
+		"id":"cengceng",
+		"info":"<p>A small hand-held pair of cymbals are struck alternately against a set of cymbals mounted on a turtle stand. The <i>ceng-ceng</i> augment the drum patterns and add to the rhythmic excitement.</p>",
+	},
+	{
+		"name":"Lanang Kedang",
+		"id":"lanang_kedang",
+		"info":"<p>Lorem</p>",
+	},
+	{
+		"name":"Wadon Kedang",
+		"id":"wadon_kedang",
+		"info":"<p>Lorem</p>",
+	},
+	{
+		"name":"Reyong",
+		"id":"reyong",
+		"info":"<p>A set of 14 small gong-chimes arranged along a wooden frame, the <i>reyong</i> is played by four musicians each using two sticks. The gongs are struck on the boss (in the middle), and sometimes on the rim, producing rapid and intricate patterns and occasional explosive chords.</p>",
+	}
+
+];

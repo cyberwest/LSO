@@ -1,0 +1,227 @@
+.loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url('loading.gif') 50% 50% no-repeat #f9f9f9;
+}
+
+.wrapper {
+	width: 920px;
+	margin: 0px auto;
+	/*padding: 20px;*/
+	text-align: center;
+	margin-top: 50px;
+}
+#lights {
+	padding: 0px;
+	text-align: left;
+}
+#lights li {
+	list-style-type: none;
+}
+.global_controls {
+	padding: 10px 0px;
+}
+.global_controls li {
+	display: inline-block;
+	list-style-type: none;
+	background: #ccc;
+	border-bottom: 2px solid #ee4392;
+	padding: 0.5em;
+	margin: 0 2px;
+	cursor: pointer;
+}
+.global_controls li:hover {
+	background: #ee4392;
+}
+#soundstart {
+	font-size: 1.2em;
+}
+.grouptoggle {
+	cursor: pointer;
+	color: #ee4392;
+}
+.grouptoggle span {
+	font-size: 0.5em;
+	line-height: 1em;
+}
+.controls {
+	display: none;
+}
+.soundrow, .controls {
+	padding:0px;
+}
+.soundrow li {
+	padding:0px;
+}
+.soundrow .pox {
+	display: inline-block;
+	text-indent:-99999px;
+	background: #ccc;
+	margin: 0px 2px;
+	cursor: pointer;
+	height: 25px;
+}
+.soundrow.short .pox {
+	width: 20px;
+}
+#tracker .pox {
+	width: 20px;
+	margin: 0px 2px;
+	cursor: default;
+	border-bottom: 2px solid #ee4392;
+}
+.soundrow .pox:nth-child(4n + 1),
+#tracker .pox:nth-child(4n + 1){
+	margin-right: 20px;
+}
+.soundrow.loop .pox {
+	width: 890px;
+}
+.soundrow.long .pox {
+	width: 435px;
+	margin-right: 20px;
+}
+.soundrow.medium .pox {
+	width: 205px;
+	margin-right: 20px;
+}
+.soundrow .pox.active {
+	background: #ee4392;
+}
+.soundrow .header {
+	/*width: 120px;*/
+	/*text-align: right;*/
+}
+
+body {
+	background: url('../assets/img/logo.png') no-repeat top left;
+}
+
+/*
+-- Intro
+-- basic page stuff
+*/
+.gamelan_hero {
+  z-index: 2;
+  position: relative;
+  background: url('../assets/img/gamelan-hero.jpg') no-repeat center center;
+  background-size: cover;
+  zoom: 1;
+}
+.gamelan_hero:before,
+.gamelan_hero:after {
+  content: "";
+  display: table;
+}
+.gamelan_hero:after {
+  clear: both;
+}
+.gamelan_hero .inner {
+  display: inline-block;
+  float: left;
+  width: 69%;
+  margin: 5%;
+  background: #ffffff;
+  border: 1px solid #d1d2d4;
+}
+.gamelan_hero .inner h1 {
+  margin: 20px 30px 10px 30px;
+}
+.gamelan_hero .inner p {
+  margin: 10px 30px;
+}
+.gamelan_hero .inner .sharethis {
+  margin: 20px 30px;
+}
+.gamelan_hero .logo {
+  width: 20%;
+  float: left;
+  padding-bottom: 20px;
+}
+
+
+footer {
+	margin-top: 80px;
+  clear: both;
+  background: #963594;
+  color: #e6e6e6;
+  text-align: center;
+  zoom: 1;
+  z-index: 2;
+  position: relative;
+}
+footer:before,
+footer:after {
+  content: "";
+  display: table;
+}
+footer:after {
+  clear: both;
+}
+footer a {
+	color: #e6e6e6;
+	display: block;
+	border-top: 1px solid #e6e6e6;
+	border-bottom: 1px solid #e6e6e6;
+	padding: 0.5em 1em;
+	font-size: 1.2em;
+	text-decoration: none;
+	text-align: center;
+	margin: 0.5em 0;
+}
+footer a:hover {
+
+	background: #e6e6e6;
+	color: #963594;
+}
+
+footer p {
+  margin: 1em auto;
+  font-size: 1.2em;
+}
+
+.addinto_sexy_bookmarks{
+        overflow:hidden;
+        margin:0;
+        padding:0;
+        list-style:none;
+        }
+        .addinto_sexy_bookmarks a{
+        overflow:hidden;
+        width:75px;
+        height:30px;
+        float:left;
+        margin-right:5px;
+        text-indent:-200px;
+        background:url("share-sprite.png") no-repeat;
+        }
+        a.addinto_button_stumbleupon{background-position:-210px -40px;}
+        a.addinto_button_twitter{background-position:-140px -40px;}
+        a.addinto_button_email{background-position:0 -40px;}
+        a.addinto_button_digg{background-position:-280px -40px;}
+        a.addinto_button_facebook{background-position:-350px -40px; margin-right:0;}
+
+        a.addinto_button_email:hover{background-position:0 1px;}
+        a.addinto_button_twitter:hover{background-position:-140px 1px;}
+        a.addinto_button_stumbleupon:hover{background-position:-210px 1px;}
+        a.addinto_button_digg:hover{background-position:-280px 1px;}
+        a.addinto_button_facebook:hover{background-position:-350px 1px;}
+
+        #text{
+        margin-top:3em;
+        font-weight:bold;
+        font-family:helvetica,arial,sans-serif;
+        }
+        #text a{
+        text-indent:0;
+        height:auto;
+        text-align:center;
+        font-size:11px;
+        padding-top:35px;
+        color:#999;
+        text-decoration:none;
+        }

@@ -1,0 +1,397 @@
+/*
+This file is split into two arrays, one for the hallfloor and one for the basementfloor.
+Within this arrays are further arrays for each room, then the different 'route' information.
+
+In this file you can change the names of areas and the content displayed in the more information pop out.
+*/
+
+
+
+// HALL FLOOR
+
+var hallfloor = [
+	{
+		"area":"hall", /* the "area" is used in the data-area attr & by main.js. Caps sensitive. Do not change. */
+		"id":"hall", /* the "id" is used in the label class name (label-id) Usually the same as the above, with exception to the up/down level areas. Caps sensitive. Do not change */
+		"name":"Jerwood Hall", // Pretty name
+		"content":{ /* These route names are set as 'data-route' attrs in the _routenames.php file. Caps sensitive. Do not change. */
+			"inspire":{
+				"text":"<p>The Jerwood Hall is used extensively for LSO Discovery workshops, rehearsals and performances. Members of the local community of all ages take part in regular activities, including early years sessions, Balinese gamelan and choirs, which have been growing in reputation since the building reopened in March 2003. There are also numerous public, many of which are free of charge, such as the popular Friday lunchtime concert series.</p><p>For more information see <a href='http://lso.co.uk/lso-discovery' class='cta' target='blank'>http://lso.co.uk/lso-discovery</a>.</p>",
+				/*
+					This is the standard text.
+					Please be aware that using the " character here will break the file. Please replace the " character with &quot; (the encoded version)
+					or 'escape' the character with a forward slash like so: \"
+					In HTML just use ' instead.
+				*/
+				"video":"vZEJLRn_88E",
+				/*
+					This is set up for YouTube video IDs only.
+					The video id is the random string on the end of the url so 'https://www.youtube.com/watch?v=MpR0vG_C4rg?v=MpR0vG_C4rg' would be 'MpR0vG_C4rg'.
+					Leave blank if no video.
+					"video":"" - st lukes video
+				*/
+				"img":1,
+				/*
+					this is the number of images for this area
+					images must be placed and named as follows:
+					assets/img/routes/[route name]/[area name]-[number].jpg
+					so if there are 3 images for the hall for the inspire route, you would put 3 jpgs named hall-1, hall-2, hall-3 in the 'inspire' folder in the 'routes' folder in the usual images folder.
+					You would then change the number above to 3. The JS will do the rest.
+					If there is more than 1 image specifed above the JS will try to make a nifty slider.
+				*/
+			},
+			"business":{
+				"text":"<p>An inspirational venue for a huge variety of artistic, corporate and private events, the Jerwood Hall is ideal for conferences, awards ceremonies, dinners and receptions with capacities for 250 seated and 450 standing. In December 2014 this unique heritage space is also available for Christmas parties, with fabulous food provided by award-winning caterers Moving Venue.</p><p>For more information see <a href='http://lso.co.uk/venue-hire' class='cta' target='blank'>http://lso.co.uk/venue-hire</a>.</p>",
+				"video":"iMwb6uBeoiU",
+				"img":1,
+			},
+			"artist":{
+				"text":"<p>The Jerwood Hall quickly became a desirable venue for solo, chamber and contemporary repertoire, with promotions linked to the LSO&rsquo;s pioneering concert season at the Barbican alongside performances by many visiting artists and ensembles. LSO St Luke&rsquo;s offers flexible acoustics, blackout facilities and a comprehensive technical infrastructure in a setting that is both comfortable and inspiring for performers and audiences alike.</p><p>For more information see <a href='http://lso.co.uk/whats-on-at-lso-st-lukes' class='cta' target='blank'>http://lso.co.uk/whats-on-at-lso-st-lukes</a>.</p>",
+				"video":"iMwb6uBeoiU",
+				"img":1,
+			},
+			"architecture":{
+				"text":"<p>Originally attributed to John James and Nicholas Hawksmoor, the stunning reinvention of LSO St Luke&rsquo;s by Levitt Bernstein employs four massive steel columns within the Jerwood Hall, which spread like the branches of a tree to support the new roof, independent of the original walls. The columns describe a square within the rectangular plan, an oblique reference to a device often featured in Hawksmoor&rsquo;s churches. Many eighteenth-century features remain alongside an impressive new infrastructure and evidence of the building&rsquo;s unstable past can be seen in the uneven walls and windows, carefully underpinned as part of the &pound;18m restoration.</p><p>Read more about LSO St Luke&rsquo;s fascinating history at <a href='http://lso.co.uk/history-of-lso-st-lukes' class='cta' target='_blank'>http://lso.co.uk/history-of-lso-st-lukes</a>.</p>",
+				"video":"srtfgzic_xo",
+				"img":1,
+			},
+		},
+	},
+	{
+		"area":"entrance",
+		"id":"entrance",
+		"name":"Main Entrance and<br>Front of House",
+		"content":{
+			"inspire":{
+				"text":"<p>Whilst most of the religious artefacts were removed from LSO St Luke&rsquo;s during the restoration, original stonework and memorial plaques can be seen in the Main Entrance off Helmet Row, which is used for the majority of public events. The front-of-house corridor however is completely refurbished and stewards within provide a warm welcome, assistance to first-time visitors as well as information about the building and surrounding area. </p>",
+				"video":"wNitiZ9_97Y",
+				"img":0,
+			},
+			"business":{
+				"text":"<p>Whilst most of the religious artefacts were removed from LSO St Luke&rsquo;s during the restoration, original stonework and memorial plaques can be seen in the Main Entrance off Helmet Row, which is used for the majority of public events. The front-of-house corridor however is completely refurbished and stewards within provide a warm welcome, assistance to first-time visitors as well as information about the building and surrounding area. </p>",
+				"video":"NP9WiUhufaM",
+				"img":1,
+			},
+			"artist":{
+				"text":"<p>Whilst most of the religious artefacts were removed from LSO St Luke&rsquo;s during the restoration, original stonework and memorial plaques can be seen in the Main Entrance off Helmet Row, which is used for the majority of public events. The front-of-house corridor however is completely refurbished and stewards within provide a warm welcome, assistance to first-time visitors as well as information about the building and surrounding area. </p>",
+				"video":"NP9WiUhufaM",
+				"img":1,
+			},
+			"architecture":{
+				"text":"<p>Whilst most of the religious artefacts were removed from LSO St Luke&rsquo;s during the restoration, original stonework and memorial plaques can be seen in the Main Entrance off Helmet Row, which is used for the majority of public events. The front-of-house corridor however is completely refurbished and stewards within provide a warm welcome, assistance to first-time visitors as well as information about the building and surrounding area. </p>",
+				"video":"wNitiZ9_97Y",
+				"img":1,
+			},
+		},
+	},
+	{
+		"area":"basementfloor",
+		"id":"topwing",
+		"name":"Down one level",
+	},
+	{
+		"area":"basementfloor",
+		"id":"bottomwing",
+		"name":"Down one level",
+	}
+
+];
+
+// BASEMENT FLOOR
+var basementfloor = [
+	{
+		"area":"hallfloor",
+		"id":"topwing",
+		"name":"Up one level",
+	},
+	{
+		"area":"hallfloor",
+		"id":"bottomwing",
+		"name":"Up one level",
+	},
+	{
+		"area":"toilets",
+		"id":"toilets",
+		"name":"Toilets",
+		"content":{
+			"inspire":{
+				"text":"<p>We have sensor taps in the ladies, gents, accessible and back-of-house toilets as well as waterless urinals. For more information about LSO St Luke&rsquo;s environmental credentials, visit our website, <a href='http://lso.co.uk/environmental-policy' class='cta' target='_blank'>http://lso.co.uk/environmental-policy</a>.</p>",
+				"video":"",
+				"img":0,
+			},
+			"business":{
+				"text":"<p>We have sensor taps in the ladies, gents, accessible and back-of-house toilets as well as waterless urinals. For more information about LSO St Luke&rsquo;s environmental credentials, visit our website, <a href='http://lso.co.uk/environmental-policy' class='cta' target='_blank'>http://lso.co.uk/environmental-policy</a>.</p>",
+				"video":"",
+				"img":0,
+			},
+			"artist":{
+				"text":"<p>We have sensor taps in the ladies, gents, accessible and back-of-house toilets as well as waterless urinals. For more information about LSO St Luke&rsquo;s environmental credentials, visit our website, <a href='http://lso.co.uk/environmental-policy' class='cta' target='_blank'>http://lso.co.uk/environmental-policy</a>.</p>",
+				"video":"",
+				"img":0,
+			},
+			"architecture":{
+				"text":"<p>We have sensor taps in the ladies, gents, accessible and back-of-house toilets as well as waterless urinals. For more information about LSO St Luke&rsquo;s environmental credentials, visit our website, <a href='http://lso.co.uk/environmental-policy' class='cta' target='_blank'>http://lso.co.uk/environmental-policy</a>.</p>",
+				"video":"",
+				"img":0,
+			},
+		},
+	},
+	{
+		"area":"gamelan",
+		"id":"gamelan",
+		"name":"Clore Gamelan Room",
+		"content":{
+			"inspire":{
+				"text":"<a href='/gamelan' class='g_link'>Explore the instruments you would find in LSO's Clore Gamelan Room &rarr;</a><p>A gamelan is a set of bronze metallophones and tuned gongs indigenous to Indonesia, where it is played for temple ceremonies and to accompany dance, drama and shadow puppetry. The music is formed of repeating patterns that can be quickly learned and played as a group regardless of musical knowledge. Our Gamelan is used regularly by members of the local community and visiting school groups who attend workshops of various lengths, depending on the age and experience of those involved.</p><p>To find out more about Gamelan workshops visit <a href='http://lso.co.uk/balinese-gamelan-workshops' class='cta' target='blank'>http://lso.co.uk/balinese-gamelan-workshops</a></p>",
+				"video":"d4biDBOJcVY",
+				"img":1,
+			},
+			"business":{
+				"text":"<a href='/gamelan' class='g_link'>Explore the instruments you would find in LSO's Clore Gamelan Room &rarr;</a><p>The Clore Gamelan Room at LSO St Luke&rsquo;s provides a useful meeting or breakout space, available to hire independently or as part of a larger booking. This characterful space can hold up to 25 people boardroom style or 50 for a presentation or reception.</p>",
+				"video":"imHPZbZK7Co",
+				"img":1,
+			},
+			"artist":{
+				"text":"<a href='/gamelan' class='g_link'>Explore the instruments you would find in LSO's Clore Gamelan Room &rarr;</a><p>Although not generally used during performances, the Clore Gamelan Room can be hired as an additional dressing room space if required.</p>",
+				"video":"imHPZbZK7Co",
+				"img":1,
+			},
+			"architecture":{
+				"text":"<a href='/gamelan' class='g_link'>Explore the instruments you would find in LSO's Clore Gamelan Room &rarr;</a><p>LSO St Luke&rsquo;s gamelan was part-funded by the Beethoven Fund for Deaf Children. It is a beautiful set of Balinese instruments commissioned by the LSO and selected especially for the building by Andy Channing, founder of the UK&rsquo;s premiere Balinese Gamelan ensemble Lila Cita. The Gamelan Room also has extensive soundproofing treatment to ensure separation from the Jerwood Hall.</p>",
+				"video":"imHPZbZK7Co",
+				"img":1,
+			},
+		},
+	},
+	{
+		"area":"clore2", // two clore rooms, same content
+		"id":"clore2",
+		"name":"Clore Room",
+	},
+	{
+		"area":"clore1", // two clore rooms, same content
+		"id":"clore1",
+		"name":"Clore Room",
+	},
+	{
+		"area":"clore",
+		"id":"clore",
+		"name":"Clore Room",
+		"content":{
+			"inspire":{
+				"text":"<p>The versatile Clore Rooms are used extensively by LSO Discovery for weekly early years music workshops, recordings by the young digital technology group and a wide variety of ad hoc projects.</p>",
+				"video":"",
+				"img":1,
+			},
+			"business":{
+				"text":"<p>The two Clore Rooms serve as useful meeting and break-out spaces, suitable for up to 16 people boardroom or 25 theatre style. AV equipment and Wi-Fi are available and there is a Boston upright piano in Clore Room 1</p>",
+				"video":"",
+				"img":1,
+			},
+			"artist":{
+				"text":"<p>For lunchtime and evening concerts the Clore Rooms are used as communal dressing rooms for performers or as control rooms for recordings. A total of four spaces can be created by deploying partition walls in each room.</p>",
+				"video":"",
+				"img":0,
+			},
+			"architecture":{
+				"text":"A flexible space ideal for architecture.<p>Extending beyond the original footprint of the church, the Clore Rooms have basic sound insulation on the walls and a textured ceiling. There are portals that enable sound and video cables to be fed directly into the rooms as an alternative to using the in-house infrastructure.</p>",
+				"video":"",
+				"img":0,
+			},
+		},
+	},
+	{
+		"area":"cafe",
+		"id":"cafe",
+		"name":"Crypt Café",
+		"content":{
+			"inspire":{
+				"text":"<p>The Caf&eacute; welcomes project participants of all ages from early years through to our loyal lunchtime concert attenders who live or work in the local area.</p>",
+				"video":"XQrWOySx4XE",
+				"img":1,
+			},
+			"business":{
+				"text":"<p>In the heart of LSO St Luke&rsquo;s reconstructed Crypt, the Caf&eacute; can accommodate up to 80 people seated or 150 standing. Used in conjunction with events in the Jerwood Hall, the Caf&eacute; provides a useful space for refreshments, buffet lunches or standing receptions.</p>",
+				"video":"XQrWOySx4XE",
+				"img":1,
+			},
+			"artist":{
+				"text":"<p>LSO St Luke&rsquo;s runs a welcoming in-house bar and caf&eacute; service open for an hour before most public events and during concert intervals. We offer a selection of hot and cold drinks, sandwiches, snacks, cakes, pastries and fruit.</p>",
+				"video":"XQrWOySx4XE",
+				"img":1,
+			},
+			"architecture":{
+				"text":"<p>When Levitt Bernstein first entered the building in 1996 it was in a deplorable state &ndash; no roof, a collapsing Crypt and plants growing out of every crack and crevice! They also discovered the parish records were woefully inaccurate and between July and December 2000 The Oxford Archaeological Unit recorded and removed a total of 1052 burials &ndash; for more information see <a href='http://lso.co.uk/burials' class='cta' target='_blank'>http://lso.co.uk/burials</a>.</p>",
+				"video":"FvEm0zhyEjQ",
+				"img":1,
+			},
+		},
+	},
+	{
+		"area":"plant",
+		"id":"plant",
+		"name":"Plant Room",
+		"content":{
+			"inspire":{
+				"text":"<p>The plant room houses power, heating and ventilation systems. LSO St Luke&rsquo;s uses ground-source heating and cooling, in the winter bringing up warm air from underground to heat the space and in summer extracting cooler air to bring the temperature down. More information about LSO St Luke&rsquo;s environmental credentials can be found on our website at <a href='http://lso.co.uk/environmental-policy' class='cta' target='_blank'>http://lso.co.uk/environmental-policy</a>. </p>",
+				"video":"",
+				"img":0,
+			},
+			"business":{
+				"text":"<p>The plant room houses power, heating and ventilation systems. LSO St Luke&rsquo;s uses ground-source heating and cooling, in the winter bringing up warm air from underground to heat the space and in summer extracting cooler air to bring the temperature down. More information about LSO St Luke&rsquo;s environmental credentials can be found on our website at <a href='http://lso.co.uk/environmental-policy' class='cta' target='_blank'>http://lso.co.uk/environmental-policy</a>. </p>",
+				"video":"",
+				"img":0,
+			},
+			"artist":{
+				"text":"<p>The plant room houses power, heating and ventilation systems. LSO St Luke&rsquo;s uses ground-source heating and cooling, in the winter bringing up warm air from underground to heat the space and in summer extracting cooler air to bring the temperature down. More information about LSO St Luke&rsquo;s environmental credentials can be found on our website at <a href='http://lso.co.uk/environmental-policy' class='cta' target='_blank'>http://lso.co.uk/environmental-policy</a>. </p>",
+				"video":"",
+				"img":0,
+			},
+			"architecture":{
+				"text":"<p>The plant room houses power, heating and ventilation systems. LSO St Luke&rsquo;s uses ground-source heating and cooling, in the winter bringing up warm air from underground to heat the space and in summer extracting cooler air to bring the temperature down. More information about LSO St Luke&rsquo;s environmental credentials can be found on our website at <a href='http://lso.co.uk/environmental-policy' class='cta' target='_blank'>http://lso.co.uk/environmental-policy</a>. </p>",
+				"video":"",
+				"img":0,
+			},
+		},
+	},
+	{
+		"area":"resources",
+		"id":"resources",
+		"name":"Alan Wall Resources Room",
+		"content":{
+			"inspire":{
+				"text":"<p>Originally intended as a cloakroom for public events at LSO St Luke&rsquo;s, the Alan Wall Resources Room now houses a large amount of LSO St Luke&rsquo;s technical equipment used across the full range of events from education workshops to concerts, recordings, awards ceremonies, filming and numerous private events.</p>",
+				"video":"",
+				"img":0,
+			},
+			"business":{
+				"text":"<p>Originally intended as a cloakroom for public events at LSO St Luke&rsquo;s, the Alan Wall Resources Room now houses a large amount of LSO St Luke&rsquo;s technical equipment used across the full range of events from education workshops to concerts, recordings, awards ceremonies, filming and numerous private events.</p>",
+				"video":"",
+				"img":0,
+			},
+			"artist":{
+				"text":"<p>Originally intended as a cloakroom for public events at LSO St Luke&rsquo;s, the Alan Wall Resources Room now houses a large amount of LSO St Luke&rsquo;s technical equipment used across the full range of events from education workshops to concerts, recordings, awards ceremonies, filming and numerous private events.</p>",
+				"video":"",
+				"img":0,
+			},
+			"architecture":{
+				"text":"<p>Originally intended as a cloakroom for public events at LSO St Luke&rsquo;s, the Alan Wall Resources Room now houses a large amount of LSO St Luke&rsquo;s technical equipment used across the full range of events from education workshops to concerts, recordings, awards ceremonies, filming and numerous private events.</p>",
+				"video":"",
+				"img":0,
+			},
+		},
+	},
+	{
+		"area":"library",
+		"id":"library",
+		"name":"Tony and Gisela Bloom Library",
+		"content":{
+			"inspire":{
+				"text":"<p>The Library houses much of the LSO&rsquo;s music as well as a wide selection of orchestral and educational instruments, puppets and other equipment for the many diverse events that take place at LSO St Luke&rsquo;s.</p>",
+				"video":"",
+				"img":0,
+			},
+			"business":{
+				"text":"<p>The Library houses much of the LSO&rsquo;s music as well as a wide selection of orchestral and educational instruments, puppets and other equipment for the many diverse events that take place at LSO St Luke&rsquo;s.</p>",
+				"video":"",
+				"img":0,
+			},
+			"artist":{
+				"text":"<p>The Library houses much of the LSO&rsquo;s music as well as a wide selection of orchestral and educational instruments, puppets and other equipment for the many diverse events that take place at LSO St Luke&rsquo;s.</p>",
+				"video":"",
+				"img":0,
+			},
+			"architecture":{
+				"text":"<p>The Library houses much of the LSO&rsquo;s music as well as a wide selection of orchestral and educational instruments, puppets and other equipment for the many diverse events that take place at LSO St Luke&rsquo;s.</p>",
+				"video":"",
+				"img":0,
+			},
+		},
+	},
+	{
+		"area":"discovery",
+		"id":"discovery",
+		"name":"Candide Discovery Room",
+		"content":{
+			"inspire":{
+				"text":"<p>Alongside a weekly digital technology group for young people based in EC1, the Discovery Room is used regularly by visiting school groups. Two types of workshop are available for students from Key Stage 2 to A Level. For more information see <a href='http://lso.co.uk/music-technology-workshops' class='cta' target='_blank'>http://lso.co.uk/music-technology-workshops</a>.</p>",
+				"video":"RKKx25PTKcg",
+				"img":0,
+			},
+			"business":{
+				"text":"<p>Alongside a weekly digital technology group for young people based in EC1, the Discovery Room is used regularly by visiting school groups. Two types of workshop are available for students from Key Stage 2 to A Level. For more information see <a href='http://lso.co.uk/music-technology-workshops' class='cta' target='_blank'>http://lso.co.uk/music-technology-workshops</a>.</p>",
+				"video":"RKKx25PTKcg",
+				"img":0,
+			},
+			"artist":{
+				"text":"<p>Alongside a weekly digital technology group for young people based in EC1, the Discovery Room is used regularly by visiting school groups. Two types of workshop are available for students from Key Stage 2 to A Level. For more information see <a href='http://lso.co.uk/music-technology-workshops' class='cta' target='_blank'>http://lso.co.uk/music-technology-workshops</a>.</p>",
+				"video":"RKKx25PTKcg",
+				"img":0,
+			},
+			"architecture":{
+				"text":"<p>Alongside a weekly digital technology group for young people based in EC1, the Discovery Room is used regularly by visiting school groups. Two types of workshop are available for students from Key Stage 2 to A Level. For more information see <a href='http://lso.co.uk/music-technology-workshops' class='cta' target='_blank'>http://lso.co.uk/music-technology-workshops</a>.</p>",
+				"video":"RKKx25PTKcg",
+				"img":0,
+			},
+		},
+	},
+	{
+		"area":"kitchen",
+		"id":"kitchen",
+		"name":"Bar and Kitchen",
+		"content":{
+			"inspire":{
+				"text":"<p>LSO St Luke&rsquo;s well-equipped bar and kitchen serves a wide variety of events. We offer an in-house service for workshops, rehearsals and concerts, whilst for external functions the facilities are used by a number of specialist event caterers approved to work on site. </p>",
+				"video":"",
+				"img":0,
+			},
+			"business":{
+				"text":"<p>LSO St Luke&rsquo;s well-equipped bar and kitchen serves a wide variety of events. We offer an in-house service for workshops, rehearsals and concerts, whilst for external functions the facilities are used by a number of specialist event caterers approved to work on site. </p>",
+				"video":"",
+				"img":0,
+			},
+			"artist":{
+				"text":"<p>LSO St Luke&rsquo;s well-equipped bar and kitchen serves a wide variety of events. We offer an in-house service for workshops, rehearsals and concerts, whilst for external functions the facilities are used by a number of specialist event caterers approved to work on site. </p>",
+				"video":"",
+				"img":0,
+			},
+			"architecture":{
+				"text":"<p>LSO St Luke&rsquo;s well-equipped bar and kitchen serves a wide variety of events. We offer an in-house service for workshops, rehearsals and concerts, whilst for external functions the facilities are used by a number of specialist event caterers approved to work on site. </p>",
+				"video":"",
+				"img":0,
+			},
+		},
+	},
+	{
+		"area":"office",
+		"id":"office",
+		"name":"Office",
+
+		"content":{
+			"inspire":{
+				"text":"<p>Designed for an original team of five, the busy office at LSO St Luke&rsquo;s now houses ten staff with a further two based in the kitchen.</p>",
+				"video":"",
+				"img":0,
+			},
+			"business":{
+				"text":"<p>Designed for an original team of five, the busy office at LSO St Luke&rsquo;s now houses ten staff with a further two based in the kitchen.</p>",
+				"video":"",
+				"img":0,
+			},
+			"artist":{
+				"text":"<p>Designed for an original team of five, the busy office at LSO St Luke&rsquo;s now houses ten staff with a further two based in the kitchen.</p>",
+				"video":"",
+				"img":0,
+			},
+			"architecture":{
+				"text":"<p>Designed for an original team of five, the busy office at LSO St Luke&rsquo;s now houses ten staff with a further two based in the kitchen.</p>",
+				"video":"",
+				"img":0,
+			},
+		},
+
+	}
+
+
+];
+

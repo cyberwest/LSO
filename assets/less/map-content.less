@@ -1,0 +1,173 @@
+/*
+-- map content
+*/
+#hallfloor > .map-info,
+#basementfloor > .map-info  {
+	position: fixed;
+	top: 20px;
+	bottom: 20px;
+	right: 0;
+
+	z-index: 10;
+
+	width: 0;
+	max-width: 500px;
+
+	background: @white;
+	border: 1px solid @grey;
+	border-right: none;
+
+	overflow: auto;
+	
+	// Text content
+	.inner {
+		padding: 20px;
+		h1 {
+			margin: 0.2em 0;
+		}
+
+		p {
+			margin: 0.5em 0;
+		}
+	}
+
+	// video content
+	iframe {
+		width: 100%;
+		height: 315px;
+		.loadingimg;
+	}
+	img {
+		.loadingimg;
+	}
+
+	// Contact link 
+	.bottomlink {
+		padding: 10px 20px;
+		color: @white;
+		font-size: 1.2em;
+		cursor: pointer;
+		background-color: @blue;
+		&:hover {
+			background-color: lighten(@blue, 10%);
+		}
+	}
+
+	.g_link {
+		display: block;
+		text-decoration: none;
+		margin: 0px 0px 20px 0px;
+		padding: 10px 20px;
+		color: @white;
+		font-size: 1.2em;
+		cursor: pointer;
+		background-color: @purple;
+		&:hover {
+			background-color: lighten(@purple, 10%);
+		}
+	}
+
+	// close button
+	.close {
+		position: absolute;
+		top:10px;
+		right: 10px;
+		cursor: pointer;
+
+		width: 25px;
+		height: 25px;
+		line-height: 25px;
+		text-align: center;
+
+		border: 1px solid @grey;
+		color: @grey;
+		font-style: normal;
+		
+		.rounded(100%);
+		&:hover {
+			background: @grey;
+			color: @white;
+		}
+	}
+}
+
+// Photo content
+.photos {
+	height: 300px;
+	margin-bottom: 20px;
+	ul li {
+		.loadingimg;
+	}
+}
+
+// Contact link colours
+	#hallfloor [data-route='inspire'],
+	#basementfloor [data-route='inspire'] {
+		.bottomlink {
+			background-color: @blue;
+			&:hover {
+				background-color: lighten(@blue, 10%);
+			}
+		}
+		.close {
+			border: 1px solid @blue;
+			color: @blue;
+			&:hover {
+				background: @blue;
+				color: @white;
+			}
+		}
+	}
+
+	#hallfloor [data-route='business'],
+	#basementfloor [data-route='business'] {
+		.bottomlink {
+			background-color: @drkpurple;
+			&:hover {
+				background-color: lighten(@drkpurple, 10%);
+			}
+		}
+		.close {
+			border: 1px solid @drkpurple;
+			color: @drkpurple;
+			&:hover {
+				background: @drkpurple;
+				color: @white;
+			}
+		}
+	}
+	#hallfloor [data-route='artist'],
+	#basementfloor [data-route='artist'] {
+		.bottomlink {
+			background-color: @pink;
+			&:hover {
+				background-color: lighten(@pink, 10%);
+			}
+		}
+		.close {
+			border: 1px solid @pink;
+			color: @pink;
+			&:hover {
+				background: @pink;
+				color: @white;
+			}
+		}
+	}
+	#hallfloor [data-route='architecture'],
+	#basementfloor [data-route='architecture'] {
+		.bottomlink {
+			background-color: @lime;
+			&:hover {
+				background-color: lighten(@lime, 10%);
+			}
+		}
+		.close {
+			border: 1px solid @lime;
+			color: @lime;
+			&:hover {
+				background: @lime;
+				color: @white;
+			}
+		}
+	}
+// END
